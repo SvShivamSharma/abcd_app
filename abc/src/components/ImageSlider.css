@@ -1,0 +1,46 @@
+.carousel-item {
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.8s ease forwards;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 0.8s ease forwards;
+}
+
+.fade-out-fast {
+  animation: fadeOutFast 0.8s ease forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutFast {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

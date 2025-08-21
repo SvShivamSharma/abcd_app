@@ -1,0 +1,134 @@
+/* Container */
+.offers-container {
+  padding: 3vw;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Common Box */
+.offer-box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5vw;
+  margin-top: 2vw;
+  margin-bottom: 20px;
+  padding: 1rem;
+  width: 93vw;
+  height:auto;
+}
+
+/* Headings */
+.offer-heading {
+  margin: 4px 0;
+  align-self: flex-start;
+  text-indent: 3vw;
+  margin-top: 6vw;
+}
+
+/* Images */
+.offer-img-full {
+  height: 28vw;
+  width: 93vw;
+  border-radius: 1vw;
+  object-fit: cover;
+}
+
+.offer-img-medium {
+  margin-top: 1vw;
+  height: 28vw;
+  width: 65vw;
+  object-fit: contain;
+}
+
+.offer-img-store {
+  width: 55vw;
+  height: auto;
+  border-radius: 1vw;
+  object-fit: contain;
+}
+
+/* Buttons */
+.offer-btn {
+  margin-top: 2vw;
+  margin-bottom: 3vw;
+  background-color: #DC143C;
+  color: white;
+  text-decoration: none;
+  border-radius: 5vw;
+  padding: 2vw 3vh;
+  font-size: 4vw;
+  align-self: flex-end;
+  text-indent: 2vw;
+}
+
+.offer-btn-wide {
+  width: 70vw;
+  height: 9vw;
+}
+
+.offer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.offer-text {
+  font-size: 5vh;
+  color: grey;
+  flex: 1;
+  margin-left: 10px;
+}
+
+/* ---------- Desktop Fix ---------- */
+@media (min-width: 768px) {
+  .offers-container {
+    padding: 40px;
+  }
+
+  .offer-box {
+    width: 100%;
+    max-width: 800px; /* keeps column narrow */
+    border-radius: 20px;
+    margin: 20px 0; /* keep vertical space like mobile */
+  }
+
+  /* Scale down images so they don't blow up */
+  .offer-img-full { 
+    width: 100%;
+    height: 200px;
+  }
+
+  .offer-img-medium {
+    width: 60%;
+    height: 180px;
+  }
+
+  .offer-img-store {
+    width: 60%;
+    height: auto;
+  }
+
+  /* Buttons smaller on desktop but same layout */
+  .offer-btn {
+    font-size: 1rem;
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: auto;
+    height: auto;
+    text-indent: 0;
+  }
+
+  .offer-btn-wide {
+    width: auto;
+  }
+
+  .offer-text {
+    font-size: 1.5rem;
+  }
+}

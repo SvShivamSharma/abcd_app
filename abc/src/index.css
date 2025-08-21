@@ -1,0 +1,78 @@
+/* index.css or App.css */
+html, body, #root,.app-container {
+  height: 100%;
+  margin:0;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+
+/*.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}*/
+.carousel-item {
+  transition: transform 1s ease-in-out;
+}
+.carousel-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 30vh; /* More height on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item img {
+    height: 35vh;
+  }
+}
+
+
+
+/* Slide left animation for first two */
+.slide-left.carousel-item-next,
+.slide-left.carousel-item-start {
+  transform: translateX(100%);
+}
+.slide-left.carousel-item-end {
+  transform: translateX(-100%);
+}
+
+/* Slide right animation for last two */
+.slide-right.carousel-item-next,
+.slide-right.carousel-item-start {
+  transform: translateX(-100%);
+}
+.slide-right.carousel-item-end {
+  transform: translateX(100%);
+}
+
+.main-content {
+  flex: 1;
+}
+body {
+  background-color: grey; /* Light grey */
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+

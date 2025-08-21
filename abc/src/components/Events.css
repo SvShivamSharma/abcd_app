@@ -1,0 +1,109 @@
+.events-container {
+  padding: 3vw;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Center boxes, but not content */
+}
+
+.events-box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;    /* <--- align contents to left */
+  border-radius: 5vw;
+  margin-bottom: 20px;
+  padding: 2vw;
+  width: 94vw;
+  box-sizing: border-box;
+}
+
+/* Header row: keep text at left */
+.events-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Headings */
+.events-title {
+  font-weight: bold;
+  margin: 0;
+  text-indent: 1vw;
+  font-size: 1.4em;
+}
+
+/* Links */
+.events-link {
+  margin-right: 15px;
+  background: white;
+  color: #DC143C;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Image row, keep at left on mobile */
+.events-img-row {
+  display: flex;
+  justify-content: flex-start;   /* <--- align images to left */
+  gap: 2vw;
+  margin-top: 2vw;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Images: don't force max-width on mobile, allow to fit parent */
+.event-img, .event-img-small, .announcement-img {
+  width: 50vw;
+  height: auto;
+  border-radius: 1vw;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+/* For announcements (single wide banner) */
+.announcement-img {
+  width: 80vw;
+  height: auto;
+  object-fit: contain;
+}
+
+/* For small event/news images on third box */
+.event-img-small {
+  width: 50vw;
+  height: auto;
+}
+
+/* --- Desktop --- */
+@media (min-width: 768px) {
+  .events-container {
+    padding: 40px;
+  }
+  .events-box {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 32px;
+    align-items: flex-start; /* Keep left aligning inside box */
+  }
+  .events-img-row {
+    justify-content: flex-start; /* Left align images also on desktop */
+    gap: 24px;
+  }
+  .event-img, .event-img-small {
+    width: 330px;
+    height: auto;
+    border-radius: 12px;
+  }
+  .announcement-img {
+    width: 650px;
+    max-width: 650px;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: contain;
+  }
+}

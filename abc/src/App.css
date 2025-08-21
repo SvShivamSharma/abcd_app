@@ -1,0 +1,35 @@
+/* App.css */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f0f0c4;
+  position: relative;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Sidebar overlay positioning */
+.sidebar-overlay {
+  position: fixed;
+
+  top: 22vw;
+  
+  left:0 ;
+  
+  
+  height: 90vh;
+
+  background-color: rgba(255, 255, 255, 0.578);
+  z-index: 1000;
+}
